@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 public class ReclamacaoSearchRequest {
 
-    @NotBlank
+    @NotBlank(message = "Código Reclamação obrigatório")
     private String codigoReclamacao;
 
 
