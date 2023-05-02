@@ -12,7 +12,7 @@ public class CustomExceptionHandler {
 
     @ExceptionHandler({Throwable.class})
     public ResponseEntity<Object> handleException(Throwable throwable) {
-
+        throwable.printStackTrace();
         BusinessException ex = BusinessException.builder()
                 .httpStatusCode(HttpStatus.INTERNAL_SERVER_ERROR)
                 .message(ofNullable(throwable.getMessage()).orElse(throwable.toString()))

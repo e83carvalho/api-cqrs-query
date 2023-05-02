@@ -45,6 +45,13 @@ public class ReclamacaoService {
         return reclamacao;
     }
 
+    public List<Reclamacao> buscarReclamacoes(String status) {
+
+        var reclamacaoList = reclamacaoRepository.findByStatus(status);
+
+         return reclamacaoList;
+    }
+
        public String buscarImagens(String codigoReclamacao, String nomeArquivo) throws RuntimeException {
 
 
